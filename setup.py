@@ -3,9 +3,8 @@ import os.path, sys, tatsu, distutils, setuptools.command.build_py
 
 here = os.path.dirname(os.path.abspath(__file__))
 
-# README = open(os.path.join(here, 'README.md'), 'r').read()
-# if sys.version_info.major == 2:
-# 	README = README.decode('utf-8')
+README = open(os.path.join(here, 'README.md'), 'rb').read()
+README = README.decode()
 
 
 class TatsuCommand(distutils.cmd.Command):
@@ -46,7 +45,7 @@ setup(
 	name="kdl-py",
 	version="0.1.5",
 	description="A Python library for the KDL Document Language.",
-	# long_description=README,
+	long_description=README,
 	long_description_content_type="text/markdown",
 	url="https://github.com/daeken/kdl-py",
 	author="Sera Brocious",
@@ -54,8 +53,7 @@ setup(
 	license="MIT",
 	classifiers=[
 		"License :: OSI Approved :: MIT License",
-		"Programming Language :: Python :: 3",
-		"Programming Language :: Python :: 2.7",
+		"Programming Language :: Python :: 3"
 	],
 	packages=["kdl"],
 	include_package_data=True,

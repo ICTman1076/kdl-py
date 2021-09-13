@@ -6,7 +6,7 @@ A Python library for the [KDL Document Language](https://github.com/kdl-org/kdl)
 
     pip install kdl-py
 
-kdl-py is fully Python 2.7 and Python 3 friendly.
+kdl-py is Python 3 friendly. Python 2.7 is not supported by psf, so it's not supported here either. Sorry and all that.
 
 ## Usage
 
